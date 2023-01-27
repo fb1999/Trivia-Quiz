@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Description
 
 Trivia App with React Native and [Open Trivia DB](https://opentdb.com/).
 
