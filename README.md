@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+Trivia App with React Native and [Open Trivia DB](https://opentdb.com/).
+
+# Getting Started with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

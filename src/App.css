@@ -1,38 +1,370 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap");
+
+body {
+  background-color: #439a97;
+  background-image: url("https://www.transparenttextures.com/patterns/hoffman.png");
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 1rem;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-weight: 500;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 600;
+  padding: 0;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 500;
+  padding: 0;
+
+  margin: 0;
+}
+
+.quiz-header {
+  padding: 0.6rem 0;
+  background-color: #285e5c;
+}
+
+.error-message {
+  color: #c37b89;
+  padding: 1rem;
+  background-color: white;
+}
+
+.quiz-spinner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  padding-top: 6rem;
+}
+
+.quiz-set {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1330px) {
+  .quiz-set {
+    max-width: 70%;
+  }
+}
+
+.title-div {
+  border-radius: 10px;
+  padding: 0rem 1.5rem;
+  margin: 2rem 0rem;
+  background-color: #285e5c;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 650px) {
+  .title-div {
+    margin: 0rem 0rem 1rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-img {
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .home-img {
+    margin-top: 2rem;
+  }
+}
+
+.quiz-form {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+}
+
+.form-label {
+  font-family: "Montserrat", sans-serif;
+  color: #439a97;
+  font-weight: 600;
+}
+
+.start-quiz {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 6rem;
+}
+
+.quiz {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .quiz {
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .quiz {
+    max-width: 50%;
+  }
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.score {
+  text-align: right;
+}
+
+.quiz-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.question {
+  background-color: white;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.current-question {
+  background-color: #285e5c;
+  padding: 1rem;
+  border-radius: 25px;
+  margin: 0.1rem 2rem 2rem 2rem;
+  text-align: center;
+  display: inline;
+}
+
+.quiz-options {
+  padding: 1rem;
+}
+
+.quiz-quit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.quiz-results {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 20px;
+}
+
+.quiz-ann {
+  text-transform: capitalize;
+  color: #439a97;
+}
+
+.quiz-name {
+  color: black;
+}
+
+@media screen and (min-width: 900px) {
+  .quiz-results {
+    max-width: 80%;
+    margin: 4rem auto;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 1200px) {
+  .quiz-results {
+    max-width: 60%;
+    margin-top: 4rem;
   }
+}
+
+.quiz-resnum {
+  color: black;
+  margin-left: 1rem;
+}
+
+.quiz-resinfo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.quiz-num {
+  color: #439a97;
+  margin-left: 1rem;
+}
+
+.quiz-congrats {
+  color: #90c8ac;
+}
+
+.quiz-fail {
+  color: #c37b89;
+}
+
+.quiz-resbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  flex-flow: column;
+}
+
+.quiz-restart-set {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .quiz-restart {
+    margin-bottom: 1rem;
+  }
+}
+
+.res-img {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 0.5rem 0rem;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #439a97;
+  --bs-btn-border-color: #439a97;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #285e5c;
+  --bs-btn-hover-border-color: #438f8c;
+  --bs-btn-focus-shadow-rgb: #439a9740;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #285e5c;
+  --bs-btn-active-border-color: #285e5c;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-secondary {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 3rem;
+  font-size: 2rem;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  --bs-btn-color: #439a97;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #439a97;
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-focus-shadow-rgb: #439a9740;
+  --bs-btn-active-color: #439a97;
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: #fff;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-info {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  border-radius: 40px;
+  padding: 0.8rem;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #285e5c;
+  --bs-btn-border-color: #285e5c;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #97dece80;
+  --bs-btn-hover-border-color: #97dece 2px;
+  --bs-btn-focus-shadow-rgb: #439a9740;
+  --bs-btn-active-color: #439a97;
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: #fff;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-danger {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 3rem;
+  padding: 0.3rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ff616d;
+  --bs-btn-border-color: #ff616d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d83a56;
+  --bs-btn-hover-border-color: #d83a56;
+  --bs-btn-focus-shadow-rgb: #d83a56;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #d83a56;
+  --bs-btn-active-border-color: #fff;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-light {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #439a97;
+  --bs-btn-border-color: #439a97;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #285e5c;
+  --bs-btn-hover-border-color: #438f8c;
+  --bs-btn-focus-shadow-rgb: #439a9740;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #285e5c;
+  --bs-btn-active-border-color: #285e5c;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-dark {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #2f2e41;
+  --bs-btn-border-color: #2f2e41;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #2f2e41cc;
+  --bs-btn-hover-border-color: #2f2e41f1;
+  --bs-btn-focus-shadow-rgb: #2f2e41f1;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #2f2e41;
+  --bs-btn-active-border-color: #2f2e41;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
